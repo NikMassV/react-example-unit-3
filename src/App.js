@@ -6,18 +6,18 @@ import Users from './components/Users';
 import UserId from './components/UserId'
 import Error from './errors/Error'
 
-import { BrowserRouter as Router, Routes, Route,/*, Link */ } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header />
       <Router>
-        {/* <nav>
-          <li><Link to="/">Main</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/users">Users</Link></li>
-        </nav> */}
+        <nav>
+          <li><NavLink to="/" exact activeClassName="primer">Main</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/users">Users</NavLink></li>
+        </nav>
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
